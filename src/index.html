@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Backbone.js</title>
+    <link rel="stylesheet" href="/css/globalStyles.css">
+</head>
+<body>
+  <!-- Learning Backbone.js -->
+  <fieldset id="fieldsetLearningBackbone">
+    <legend id="legendLearningBackbone">Learning Backbone.js</legend>
+    <div id="divLearningBackbone" class="container">
+      <!-- start of 'Learning Backbone.js' content -->
+      <div class="site">
+        <div class="logo">
+          <img src="/images/logo.png" width="207" height="124" alt="Hansel and Petal">
+        </div>
+        <div id="allFlowers"></div>
+        <div id="copy"></div>
+      </div>
+      <!-- end of 'Learning Backbone.js' content -->
+    </div>
+  </fieldset>
+
+  <!-- underscore template used by backbone -->
+  <script id="flowerElement" type="text/template">
+    <a href="#<%= link %>"><img src="<%= img %>" alt="<%= name %>" class="image" /></a>
+    <ul>
+      <li class="flowerInfo"><strong>Name:</strong> <%= name %></li>
+      <li class="flowerInfo"><strong>Price:</strong> <%= price %></li>
+      <li class="flowerInfo"><strong>Color:</strong> <%= color %></li>
+    </ul>
+  </script>
+
+  <script src="/jquery/jquery.min.js"></script>
+  <script src="/underscore/underscore-min.js"></script>
+  <script src="/backbone/backbone-min.js"></script>
+  <script src="/js/models/singleFlowerModel.js"></script>
+  <script src="/js/views/singleFlowerView.js"></script>
+  <script src="/js/views/allFlowersView.js"></script>
+  <script src="/js/collections/allFlowers.js"></script>
+  <script src="/js/routes/router.js"></script>
+  <script src="/js/flowerApp.js"></script>
+
+  <script>
+      $(document).ready(function() {
+        // collapse all fieldsets
+        $(".container").hide();
+        // legend click event
+        $(document).on("click", "body *", function() {
+          var elementId = "";
+          switch ($(this).attr("id")) {
+            case "legendLearningBackbone":
+              elementId = "#divLearningBackbone";
+              break;
+          }
+          $(elementId).slideToggle();
+        });
+      });
+  </script>
+</body>
+</html>

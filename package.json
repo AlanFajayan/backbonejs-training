@@ -1,0 +1,33 @@
+{
+  "name": "backbonejs-training",
+  "version": "1.0.0",
+  "description": "Backbone.js Training",
+  "main": "backbone.js",
+  "url": "http://backbonejs.org",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "start": "node buildScripts/srcServer.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alanfajayan/backbonejs-training.git"
+  },
+  "dependencies": {
+    "backbone": "1.3.3",
+    "underscore": ">=1.9.0",
+    "jquery": "^3.2.1",
+    "express": "4.14.0",
+    "open": "0.0.5"
+  },
+  "homepage": "https://github.com/AlanFajayan/backbonejs-training#readme",
+  "keywords": [
+    "model",
+    "view",
+    "controller",
+    "router",
+    "server",
+    "client",
+    "browser"
+  ]
+}

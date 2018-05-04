@@ -1,0 +1,65 @@
+html {
+  background: #fff url(../images/html.jpg) repeat;
+}
+body {
+  font-family: Georgia, serif;
+  margin: 0;
+}
+fieldset {
+  margin: 15px !important;
+  border-radius: 20px;
+  padding-bottom: 10px;
+  border: 1px solid #4c4c4c !important;
+}
+legend {
+  font-size: 16px;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 1rem !important;
+  color: #fff !important;
+  background-color: #4c4c4c;
+  width: 12rem !important;
+}
+.site {
+  background-color: #fff;
+  border: 1px solid red;
+  width: 900px;
+  min-height: 570px;
+  margin: 20px auto 0;
+}
+.logo {
+  padding: 5px;
+}
+.image {
+  border: 3px solid purple;
+  padding: 2px;
+}
+.flowerListItem {
+  display: inline-block;
+  margin: 0 10px;
+  list-style-type: none;
+}
+.flowerInfo {
+  list-style-type: none;
+  text-align: left;
+  margin-bottom: 5px;
+}
+#copy {
+  text-align: center;
+  color: red;
+  font-size: 22px;
+  padding: 5px;
+  margin: 10px auto 0;
+  width: 600px;
+}
+#allFlowers {
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  width: 750px;
+  background-color: #e0e0e0;
+  border: 1px solid #cc6699;
+}
+.bgColorImage {
+  background-color: #cebdbd;
+}
