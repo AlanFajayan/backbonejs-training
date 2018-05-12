@@ -9,17 +9,40 @@ fieldset {
   margin: 15px !important;
   border-radius: 20px;
   padding-bottom: 10px;
+}
+fieldset {
+  border: 1px solid orange !important;
+}
+.mainFieldset {
   border: 1px solid #4c4c4c !important;
 }
-legend {
+legend,
+.mainLegend {
   font-size: 16px;
   padding: 5px;
   cursor: pointer;
   margin-left: 1rem !important;
   color: #fff !important;
-  background-color: #4c4c4c;
-  width: 12rem !important;
 }
+legend {
+  background-color: orange;
+  width: 8rem !important;
+  text-align: center;
+}
+.mainLegend {
+  background-color: #4c4c4c;
+  width: 15rem !important;
+}
+i {
+  color: #00ff00;
+}
+.container {
+  border: 2px gray solid;
+  border-radius: 10px;
+  padding: 0.2rem;
+}
+
+/* Learning Backbone.js styles */
 .site {
   background-color: #fff;
   border: 1px solid red;
@@ -62,4 +85,19 @@ legend {
 }
 .bgColorImage {
   background-color: #cebdbd;
+}
+
+/* Backbone.js Fundamentals styles */
+div.rectangle {
+  position: absolute;
+  border: 4px solid black;
+}
+div#divBasic {
+  height: 300px;
+}
+.routeListItem {
+  cursor: pointer;
+}
+.routeListItem:hover {
+  text-decoration: underline;
 }

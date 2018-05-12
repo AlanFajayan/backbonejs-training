@@ -10,9 +10,9 @@
 </head>
 <body>
   <!-- Learning Backbone.js -->
-  <fieldset id="fieldsetLearningBackbone">
-    <legend id="legendLearningBackbone">Learning Backbone.js</legend>
-    <div id="divLearningBackbone" class="container">
+  <fieldset id="fieldsetLearningBackbone"  class="mainFieldset">
+    <legend id="legendLearningBackbone" class="mainLegend">Learning Backbone.js</legend>
+    <div id="divLearningBackbone" class="mainContainers">
       <!-- start of 'Learning Backbone.js' content -->
       <div class="site">
         <div class="logo">
@@ -25,6 +25,40 @@
     </div>
   </fieldset>
 
+  <!-- Backbone.js Fundamentals -->
+  <fieldset id="fieldsetFundamentals" class="mainFieldset">
+      <legend id="legendFundamentals" class="mainLegend">Backbone.js Fundamentals</legend>
+      <div id="divFundamentals" class="mainContainers">
+        <!-- start of 'Backbone.js Fundamentals' content -->
+        <!-- basic -->
+        <fieldset id="fieldsetBasic">
+          <legend id="legendBasic" class="text-center">basic</legend>
+          <div id="divBasic" class="container">
+            <h3>Rectangles (click on a rectangle to move it)</h3>
+            <div id="canvas"></div>
+          </div>
+        </fieldset>
+
+        <!-- views -->
+        <fieldset id="fieldsetView">
+          <legend id="legendView" class="text-center">view</legend>
+          <div id="divView" class="container">
+            <div id="dateView"></div>
+          </div>
+        </fieldset>
+        
+        <!-- route -->
+        <fieldset id="fieldsetRoute">
+          <legend id="legendRoute" class="text-center">route</legend>
+          <div id="divRoute" class="container">
+            <div id="divDocuments"></div>
+          </div>
+        </fieldset>
+
+        <!-- end of 'Backbone.js Fundamentals' content -->
+      </div>
+    </fieldset>
+
   <!-- underscore template used by backbone -->
   <script id="flowerElement" type="text/template">
     <a href="#<%= link %>"><img src="<%= img %>" alt="<%= name %>" class="image" /></a>
@@ -35,26 +69,46 @@
     </ul>
   </script>
 
+  <!-- core scripts -->
   <script src="/jquery/jquery.min.js"></script>
   <script src="/underscore/underscore-min.js"></script>
-  <script src="/backbone/backbone-min.js"></script>
+  <script src="/backbone/backbone-min.js"></script>  
+  <!-- Learning Backbone.js training scripts -->
   <script src="/js/models/singleFlowerModel.js"></script>
   <script src="/js/views/singleFlowerView.js"></script>
   <script src="/js/views/allFlowersView.js"></script>
   <script src="/js/collections/allFlowers.js"></script>
   <script src="/js/routes/router.js"></script>
   <script src="/js/flowerApp.js"></script>
-
+  <!-- Backbone.js Fundamentals training scripts -->
+  <script src="/js/basic.js"></script>
+  <script src="/js/view.js"></script>
+  <script src="/js/route.js"></script>
+ 
   <script>
       $(document).ready(function() {
         // collapse all fieldsets
-        $(".container").hide();
+        $(".container, .mainContainers").hide();
         // legend click event
         $(document).on("click", "body *", function() {
           var elementId = "";
           switch ($(this).attr("id")) {
+            // parent fieldsets
             case "legendLearningBackbone":
               elementId = "#divLearningBackbone";
+              break;
+            case "legendFundamentals":
+              elementId = "#divFundamentals";
+              break;
+            // child fieldsets
+            case "legendBasic":
+              elementId = "#divBasic";
+              break;
+            case "legendView":
+              elementId = "#divView";
+              break;
+            case "legendRoute":
+              elementId = "#divRoute";
               break;
           }
           $(elementId).slideToggle();
